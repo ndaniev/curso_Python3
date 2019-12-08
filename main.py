@@ -1,14 +1,15 @@
 VALID_COMMANDS = 'C,L'
 
-clients = 'tomas,juan,'
+clients = 'tomas,juan'
 
 
 def create_client(client_name): #1
     global clients
 
     if client_name not in clients:
-        clients += client_name
         _add_comma()
+        clients += client_name
+
     else:
         print('Client already in clients list')
 
@@ -32,7 +33,7 @@ def _print_welcome():
 
 
 if __name__ == '__main__':
-    _print_welcome()
+    _print_welcome() 
 
     command = input()
 
